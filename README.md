@@ -23,3 +23,15 @@ Install TTS using this
   pip install -e .[all,dev,notebooks]
 ```
     
+## To Train the Model
+
+```bash
+set CUDA_VISIBLE_DEVICES=0
+python train.py --restore_path <path of the model_file.pth> 
+```
+
+## To run the trained Model
+
+```bash
+tts --text "Text for TTS" --model_path path/to/model.pth --config_path path/to/config.json --out_path folder/to/save/output.wav 
+```
